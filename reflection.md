@@ -8,9 +8,10 @@
 
 2. In the catch block, why is it better to send a generic error message to the client instead of the actual error object from axios?
 
-It is better to send a generic error message because the actual Axios error may contain technical or sensitive information about the server or the request. A generic message protects internal information while still informing the client that something went wrong.
+* It is better to send a generic error message because the actual Axios error may contain technical or sensitive information about the server or the request. 
+* A generic message protects internal information while still informing the client that something went wrong.
 
 
 3. How might you modify this application to get a fact in a different language if the external API supported it (e.g., with a query parameter like ?language=de)?
 
-I could modify the URL by adding a language query parameter, such as ?language=de.
+* I could modify the URL by adding a language query parameter, such as ?language=de.
