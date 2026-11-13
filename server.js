@@ -20,13 +20,13 @@ app.get('/api/fun-fact', async (req, res) => {
 
     //get data from the API
     const apiResponse = await axios.get(url);
-  
+
     // extract only the text of the fact.
     const funFact = apiResponse.data.text;
-    
+
     // send only the fun fact text to the client as a JSON response
-    res.json({ fact: funFact});  
-    
+    res.json({ fact: funFact });
+
   } catch (error) {
     console.error('Error fetching fun facts:', error);
     res.status(500).json({ message: 'Could not fetch fun fact' });
@@ -37,8 +37,3 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 })
 
-test:
-http://localhost:3000/api/fun-fact
-{"fact":"A honeybee can fly at fifteen miles per hour."}
-{"fact":"Pepsi originally contained pepsin, thus the name. "}
-{"fact":"John Lennon`s first girlfriend was named Thelma Pickles."}
